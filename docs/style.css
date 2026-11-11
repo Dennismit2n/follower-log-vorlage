@@ -170,4 +170,7 @@ dialog {
 }
 /* Hoher Kontrast kennt keine Schatten, der Beschlag bleibt. Gedruckt wird ohne beides. */
 :root[data-vision="contrast"] :is(.knopf, .karte, dialog) { box-shadow: none; }
+@media print {
+  .knopf, .karte, #suche, label input, dialog { background-image: none !important; box-shadow: none !important; }
+}
 /* Ende Beschlag */
