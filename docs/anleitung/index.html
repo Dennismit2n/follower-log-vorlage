@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Follower-Log einrichten</title>
+<meta name="description" content="Schritt für Schritt in Bildern: Vorlage kopieren, Token anlegen, App einrichten und installieren.">
+<meta name="theme-color" content="#0f1115">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="anleitung.css?v=1">
+</head>
+<body>
+<header class="seitenkopf">
+  <h1>Follower-Log einrichten</h1>
+  <p>Zehn Bilder, etwa fünf Minuten. Du brauchst nur ein GitHub-Konto und dein Handy. Die Knöpfe auf GitHub heißen auf Englisch so, wie sie hier in den Bildern stehen.</p>
+  <p><a href="../">Zur App</a> · <a href="../?demo">Demo ansehen</a> · <a href="https://github.com/Dennismit2n/follower-log-vorlage">Vorlage auf GitHub</a></p>
+</header>
+
+<main>
+
+<!-- 1 -->
+<section class="schritt">
+  <h2><span>1</span> Vorlage kopieren</h2>
+  <div class="bild" id="b01">
+    <div class="titel"><b>1</b> Vorlage kopieren</div>
+    <div class="fenster">
+      <div class="leiste"><i></i><i></i><i></i><span class="adresse">github.com/Dennismit2n/follower-log-vorlage</span></div>
+      <div class="inhalt">
+        <div class="reihe zwischen">
+          <div class="reponame">▣ Dennismit2n / <b>follower-log-vorlage</b> <span class="schild">Public template</span></div>
+          <div class="stapel">
+            <span class="k gruen ziel">Use this template ▾</span>
+            <div class="menue"><span class="ziel zwei">Create a new repository</span><span class="blass">Open in a codespace</span></div>
+          </div>
+        </div>
+        <div class="dateien"><span>▸ .github</span><span>▸ docs</span><span>▫ LICENSE</span><span>▫ README.md</span></div>
+      </div>
+    </div>
+    <div class="unten">Oben rechts <em>Use this template</em>, dann <em>Create a new repository</em>.</div>
+  </div>
+  <p>Öffne die <a href="https://github.com/Dennismit2n/follower-log-vorlage">Vorlage auf GitHub</a> und melde dich an. Oben rechts sitzt der grüne Knopf <em>Use this template</em>. Im Menü darunter wählst du <em>Create a new repository</em>. Damit bekommst du eine eigene Kopie, die mit der Vorlage nichts mehr zu tun hat.</p>
+</section>
+
+<!-- 2 -->
+<section class="schritt">
+  <h2><span>2</span> Als privates Repo anlegen</h2>
+  <div class="bild" id="b02">
+    <div class="titel"><b>2</b> Als privates Repo anlegen</div>
+    <div class="fenster">
+      <div class="leiste"><i></i><i></i><i></i><span class="adresse">github.com/new</span></div>
+      <div class="inhalt formular">
+        <label>Repository name</label>
+        <div class="feld">follower-log</div>
+        <label>Visibility</label>
+        <div class="wahl"><span class="punkt"></span> Public <small>Jeder im Netz kann es sehen</small></div>
+        <div class="wahl an ziel"><span class="punkt"></span> Private <small>Nur du</small></div>
+        <span class="k gruen ziel zwei">Create repository</span>
+      </div>
+    </div>
+    <div class="unten">Unbedingt <em>Private</em>. Sonst kann jeder deine Follower-Liste lesen.</div>
+  </div>
+  <p>Gib dem Repo einen Namen, zum Beispiel <code>follower-log</code>. Bei <em>Visibility</em> wählst du <strong>Private</strong>. Das ist wichtig: In einem öffentlichen Repo könnte jeder mitlesen, wer dir folgt und wer gegangen ist. Dann <em>Create repository</em>.</p>
+</section>
+
+<!-- 3 -->
+<section class="schritt">
+  <h2><span>3</span> Den ersten Lauf starten</h2>
+  <div class="bild" id="b03">
+    <div class="titel"><b>3</b> Den ersten Lauf starten</div>
+    <div class="fenster">
+      <div class="leiste"><i></i><i></i><i></i><span class="adresse">github.com/deinkonto/follower-log/actions</span></div>
+      <div class="inhalt">
+        <div class="tabs"><span>Code</span><span>Issues</span><span>Pull requests</span><span class="aktiv ziel">Actions</span><span>Settings</span></div>
+        <div class="reihe oben">
+          <div class="seite"><span class="blass">All workflows</span><span class="gewaehlt ziel zwei">Follower-Tracker</span></div>
+          <div class="haupt">
+            <div class="reihe zwischen"><b>Follower-Tracker</b><span class="k ziel drei">Run workflow ▾</span></div>
+            <div class="menue rechts"><span class="blass">Branch: main</span><span class="k gruen ziel vier">Run workflow</span></div>
+            <div class="lauf">● Follower-Tracker <small>läuft … etwa 30 Sekunden</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="unten">In deinem neuen Repo: <em>Actions</em>, <em>Follower-Tracker</em>, zweimal <em>Run workflow</em>.</div>
+  </div>
+  <p>In deinem neuen Repo öffnest du den Reiter <em>Actions</em>. Links klickst du auf <em>Follower-Tracker</em>, rechts auf <em>Run workflow</em> und im kleinen Menü noch einmal auf den grünen Knopf <em>Run workflow</em>. Nach etwa einer halben Minute liegen zwei neue Dateien im Repo: <code>followers.txt</code> mit der aktuellen Liste und <code>log.md</code> mit dem Logbuch. Der erste Eintrag heißt <em>Startbestand</em>. Ab jetzt läuft das jeden Tag von selbst.</p>
+</section>
+
+<!-- 4 -->
+<section class="schritt">
+  <h2><span>4</span> Token: der Weg dorthin</h2>
+  <div class="bild" id="b04">
+    <div class="titel"><b>4</b> Token: der Weg dorthin</div>
+    <div class="pfad">
+      <div class="station ziel"><span class="rund">☺</span>Profilbild<small>oben rechts</small></div><u>→</u>
+      <div class="station">Settings</div><u>→</u>
+      <div class="station">Developer settings<small>ganz unten links</small></div><u>→</u>
+      <div class="station">Personal access tokens</div><u>→</u>
+      <div class="station">Fine-grained tokens</div><u>→</u>
+      <div class="station gruenrand ziel zwei">Generate new token</div>
+    </div>
+    <div class="kurz">Abkürzung: <code>github.com/settings/personal-access-tokens/new</code></div>
+    <div class="unten">Der Token ist der Schlüssel, mit dem die App deinen Workflow starten darf.</div>
+  </div>
+  <p>Die App läuft nur in deinem Browser und hat kein eigenes Konto. Damit sie deinen Workflow starten und dein privates Logbuch lesen darf, braucht sie einen Schlüssel von dir: einen <strong>Token</strong>. Den legst du auf GitHub an: Profilbild oben rechts, <em>Settings</em>, ganz unten links <em>Developer settings</em>, dann <em>Personal access tokens</em>, <em>Fine-grained tokens</em> und <em>Generate new token</em>. Schneller geht es über <a href="https://github.com/settings/personal-access-tokens/new">diesen direkten Link</a>.</p>
+</section>
+
+<!-- 5 -->
+<section class="schritt">
+  <h2><span>5</span> Token: nur für dein Logbuch-Repo</h2>
+  <div class="bild" id="b05">
+    <div class="titel"><b>5</b> Token: nur für dein Logbuch-Repo</div>
+    <div class="fenster">
+      <div class="leiste"><i></i><i></i><i></i><span class="adresse">github.com/settings/personal-access-tokens/new</span></div>
+      <div class="inhalt formular zweispaltig">
+        <div>
+          <label>Token name</label><div class="feld">follower-log-app</div>
+          <label>Expiration</label><div class="feld">90 days ▾</div>
+        </div>
+        <div>
+          <label>Repository access</label>
+          <div class="wahl"><span class="punkt"></span> Public repositories</div>
+          <div class="wahl"><span class="punkt"></span> All repositories</div>
+          <div class="wahl an ziel"><span class="punkt"></span> Only select repositories</div>
+          <div class="feld ziel zwei">Select repositories ▾ <span class="schild gruen">✓ follower-log</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="unten"><em>Only select repositories</em>, dann nur dein Logbuch-Repo ankreuzen.</div>
+  </div>
+  <p>Gib dem Token einen Namen, an dem du ihn später wiedererkennst, etwa <code>follower-log-app</code>. Bei <em>Expiration</em> stellst du ein, wie lange er gilt. Bei <em>Repository access</em> wählst du <strong>Only select repositories</strong> und kreuzt in der Liste nur dein Logbuch-Repo an. So kommt der Token an nichts anderes heran, selbst wenn er einmal in falsche Hände gerät.</p>
+</section>
+
+<!-- 6 -->
+<section class="schritt">
+  <h2><span>6</span> Token: genau zwei Rechte</h2>
+  <div class="bild" id="b06">
+    <div class="titel"><b>6</b> Token: genau zwei Rechte</div>
+    <div class="fenster">
+      <div class="leiste"><i></i><i></i><i></i><span class="adresse">github.com/settings/personal-access-tokens/new</span></div>
+      <div class="inhalt formular">
+        <div class="reihe zwischen"><label>Permissions · Repositories</label><span class="k ziel">+ Add permissions</span></div>
+        <div class="recht ziel zwei"><b>Actions</b><span class="feld schmal">Read and write ▾</span></div>
+        <div class="recht ziel drei"><b>Contents</b><span class="feld schmal">Read-only ▾</span></div>
+        <div class="recht blass"><b>Metadata</b><span class="feld schmal">Read-only</span><small>kommt von selbst dazu</small></div>
+        <span class="k gruen ziel vier">Generate token</span>
+      </div>
+    </div>
+    <div class="unten"><em>Actions: Read and write</em> und <em>Contents: Read-only</em>. Mehr nicht.</div>
+  </div>
+  <p>Unter <em>Permissions</em> klickst du auf <em>Add permissions</em> und wählst <strong>Actions</strong> und <strong>Contents</strong> aus. Bei Actions stellst du den Zugriff auf <strong>Read and write</strong>, damit die App den Workflow starten kann. Contents bleibt auf <strong>Read-only</strong>, damit sie das Logbuch lesen, aber nichts verändern kann. <em>Metadata</em> setzt GitHub von selbst dazu. Mehr Rechte braucht die App nicht. Dann unten <em>Generate token</em>.</p>
+</section>
+
+<!-- 7 -->
+<section class="schritt">
+  <h2><span>7</span> Token kopieren</h2>
+  <div class="bild" id="b07">
+    <div class="titel"><b>7</b> Token kopieren</div>
+    <div class="fenster">
+      <div class="leiste"><i></i><i></i><i></i><span class="adresse">github.com/settings/personal-access-tokens</span></div>
+      <div class="inhalt">
+        <div class="tokenkasten">
+          <small>Make sure to copy your token now as you will not be able to see it again.</small>
+          <div class="reihe"><code class="token">github_pat_11ABCDEFG0…</code><span class="k ziel">⧉ Copy</span></div>
+        </div>
+        <div class="merk">
+          <div><b>Nur jetzt sichtbar.</b> Sofort kopieren.</div>
+          <div><b>Nirgends posten.</b> Er gehört nur in die App.</div>
+          <div><b>Verloren?</b> Löschen und neu anlegen, das kostet nichts.</div>
+        </div>
+      </div>
+    </div>
+    <div class="unten">GitHub zeigt den Token ein einziges Mal. Kopiere ihn gleich.</div>
+  </div>
+  <p>GitHub zeigt dir den Token jetzt ein einziges Mal. Er beginnt mit <code>github_pat_</code>. Kopiere ihn sofort. Am einfachsten machst du die Schritte 4 bis 7 gleich auf dem Handy, dann kannst du ihn direkt in die App einfügen. Behandle ihn wie ein Passwort: nicht verschicken, nicht in Chats posten. Wenn er verloren geht oder abläuft, löschst du ihn auf derselben Seite und legst einen neuen an.</p>
+</section>
+
+<!-- 8 -->
+<section class="schritt">
+  <h2><span>8</span> App öffnen und eintragen</h2>
+  <div class="bild" id="b08">
+    <div class="titel"><b>8</b> App öffnen und eintragen</div>
+    <div class="reihe mitte weit">
+      <div class="handy">
+        <div class="hkopf"><b>Follower-Log</b><span class="k klein ziel">⚙</span></div>
+        <div class="dialog">
+          <b>Einstellungen</b>
+          <label>Repository</label><div class="feld ziel zwei">deinkonto/follower-log</div>
+          <label>Workflow-Datei</label><div class="feld">followers.yml</div>
+          <label>Token</label><div class="feld ziel drei">••••••••••••••••</div>
+          <div class="reihe zwischen"><span class="k klein blassk">Alles vergessen</span><span class="k klein ziel vier">Speichern</span></div>
+        </div>
+      </div>
+      <div class="notiz">
+        <code>dennismit2n.github.io/<wbr>follower-log-vorlage</code>
+        <ul>
+          <li>Repository: <b>konto/name</b>, so wie es in der Adresse deines Repos steht</li>
+          <li>Workflow-Datei bleibt, wie sie ist</li>
+          <li>Token einfügen, speichern</li>
+        </ul>
+      </div>
+    </div>
+    <div class="unten">Der Token bleibt auf deinem Gerät und geht nur an api.github.com.</div>
+  </div>
+  <p>Öffne auf dem Handy <a href="../">die App</a>. Beim ersten Mal geht das Fenster <em>Einstellungen</em> von selbst auf, später erreichst du es über das Zahnrad. Bei <em>Repository</em> trägst du dein Konto und den Repo-Namen ein, getrennt durch einen Schrägstrich, zum Beispiel <code>deinkonto/follower-log</code>. <em>Workflow-Datei</em> lässt du stehen. Bei <em>Token</em> fügst du den kopierten Token ein. Nach <em>Speichern</em> legt die App sofort los. Der Token wird nur im Browser deines Geräts gespeichert und ausschließlich an <code>api.github.com</code> geschickt. Die App hat keinen eigenen Server.</p>
+</section>
+
+<!-- 9 -->
+<section class="schritt">
+  <h2><span>9</span> Auf den Startbildschirm legen</h2>
+  <div class="bild" id="b09">
+    <div class="titel"><b>9</b> Auf den Startbildschirm legen</div>
+    <div class="reihe mitte weit">
+      <div class="handy">
+        <div class="hschild">Android · Chrome, Edge</div>
+        <div class="hkopf"><b>Follower-Log</b><span class="reihe eng"><span class="k klein ziel">Installieren</span><span class="k klein">⚙</span></span></div>
+        <div class="karte"><span class="gross">74</span> <small>Follower</small></div>
+        <div class="hinw">Knopf <b>Installieren</b> antippen, bestätigen.</div>
+      </div>
+      <div class="handy">
+        <div class="hschild">iPhone · Safari</div>
+        <div class="hkopf"><b>Follower-Log</b><span class="k klein">⚙</span></div>
+        <div class="karte"><span class="gross">74</span> <small>Follower</small></div>
+        <div class="teilen"><span class="k klein ziel">⬆ Teilen</span><u>→</u><span class="k klein ziel zwei">⊞ Zum Home-Bildschirm</span></div>
+      </div>
+    </div>
+    <div class="unten">Danach liegt die App als Symbol bei deinen anderen Apps.</div>
+  </div>
+  <p><strong>Android</strong> (Chrome oder Edge): Oben in der App erscheint der Knopf <em>Installieren</em>. Antippen und bestätigen. Fehlt der Knopf, findest du im Browser-Menü mit den drei Punkten <em>App installieren</em> oder <em>Zum Startbildschirm hinzufügen</em>. <strong>iPhone</strong> (Safari): unten auf das Teilen-Symbol tippen, dann <em>Zum Home-Bildschirm</em>. Die Einstellungen aus Schritt 8 gelten je Browser. Auf dem iPhone trägst du sie am besten erst in der installierten App ein.</p>
+</section>
+
+<!-- 10 -->
+<section class="schritt">
+  <h2><span>10</span> Fertig: so arbeitet die App</h2>
+  <div class="bild" id="b10">
+    <div class="titel"><b>10</b> Fertig: so arbeitet die App</div>
+    <div class="reihe mitte weit">
+      <div class="handy">
+        <div class="hkopf"><b>Follower-Log</b><span class="k klein">⚙</span></div>
+        <div class="karte"><span class="gross">74</span> <small>Follower</small><div class="blass kleinertext">Letzter Lauf vor 42 min. Nächster Abruf ab 14:07.</div></div>
+        <div class="tag">Mi., 11.11.2026</div>
+        <div class="zeile"><span class="m neu">neu</span> nova-dev &nbsp; zoe</div>
+        <div class="zeile"><span class="m weg">weg</span> old-account</div>
+      </div>
+      <div class="ablauf">
+        <div class="ziel"><b>App öffnen</b></div><u>↓</u>
+        <div>Letzter Lauf älter als <b>178 Minuten</b>?</div>
+        <div class="gabel">
+          <div class="ziel zwei"><b>Ja:</b> Workflow starten, warten, anzeigen</div>
+          <div class="ziel drei"><b>Nein:</b> nur das Logbuch neu laden</div>
+        </div>
+      </div>
+    </div>
+    <div class="unten">Beim Öffnen sieht die App nach. Höchstens ein Lauf alle 178 Minuten.</div>
+  </div>
+  <p>Jedes Mal, wenn du die App öffnest, fragt sie GitHub, wann der Workflow zuletzt gelaufen ist. Liegt das mehr als 178 Minuten zurück, startet sie ihn, wartet etwa eine halbe Minute und zeigt das Ergebnis. Sonst lädt sie nur das Logbuch neu und sagt dir, ab wann der nächste Abruf geht. Der tägliche Lauf um 09:09 UTC zählt dabei mit. Unter <em>Verlauf</em> siehst du je Tag, wer <span class="m neu">neu</span> ist und wer <span class="m weg">weg</span> ist. Unter <em>Alle Follower</em> steht die ganze Liste mit Suche.</p>
+</section>
+
+<section class="schritt fragen">
+  <h2>Wenn etwas hakt</h2>
+  <dl>
+    <dt>„Token ungültig oder abgelaufen“</dt><dd>Der Token ist abgelaufen oder falsch eingefügt. Lege einen neuen an (Schritte 4 bis 7) und trage ihn unter ⚙ ein.</dd>
+    <dt>„Repo oder Workflow nicht gefunden“</dt><dd>Prüfe die Schreibweise von <code>konto/name</code>. Oder der Token gilt nicht für dieses Repo (Schritt 5).</dd>
+    <dt>„Token darf das nicht“</dt><dd>Ein Recht fehlt. Actions muss auf <em>Read and write</em> stehen, Contents auf <em>Read-only</em> (Schritt 6). Du kannst den Token auf GitHub nachträglich bearbeiten.</dd>
+    <dt>Die Uhrzeit des täglichen Laufs ändern</dt><dd>Steht in der <a href="https://github.com/Dennismit2n/follower-log-vorlage#uhrzeit-ändern">README</a>.</dd>
+    <dt>Alles wieder loswerden</dt><dd>In der App unter ⚙ <em>Alles vergessen</em>, auf GitHub den Token löschen. Das Repo kannst du behalten oder löschen.</dd>
+  </dl>
+</section>
+
+</main>
+<script>
+// Verkleinert die Bilder als Ganzes, wenn der Bildschirm schmaler ist als 880 Pixel.
+// Auf dem Handy bleiben sie lesbar groß und lassen sich seitlich wischen.
+function anpassen() {
+  const breite = document.querySelector("main").clientWidth;
+  document.documentElement.style.setProperty("--z", Math.max(0.62, Math.min(1, breite / 880)));
+}
+addEventListener("resize", anpassen);
+anpassen();
+document.querySelectorAll(".bild").forEach((bild, i) => {
+  const rahmen = document.createElement("div");
+  rahmen.className = "wischen";
+  bild.replaceWith(rahmen);
+  rahmen.append(bild);
+  const p = document.createElement("p");
+  p.className = "gross-link";
+  p.append("Bild ");
+  const a = document.createElement("a");
+  a.href = "schritt-" + String(i + 1).padStart(2, "0") + ".png";
+  a.textContent = "groß öffnen";
+  p.append(a);
+  rahmen.after(p);
+});
+</script>
+</body>
+</html>

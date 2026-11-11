@@ -1,5 +1,5 @@
 // Hält nur die App-Hülle offline bereit. Anfragen an api.github.com gehen immer direkt ins Netz.
-const VERSION = "followerlog-v1";
+const VERSION = "followerlog-v2";
 const HUELLE = ["./", "index.html", "style.css?v=1", "app.js?v=1", "manifest.webmanifest", "icon.svg", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", (e) => {
