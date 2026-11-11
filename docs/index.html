@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Follower-Log</title>
+<meta name="description" content="Wer folgt dir auf GitHub, wer ist gegangen? Startet beim Öffnen deinen Follower-Workflow.">
+<meta name="theme-color" content="#0f1115">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<header class="kopf">
+  <h1>Follower-Log</h1>
+  <div class="knoepfe">
+    <button id="installieren" class="knopf" hidden>Installieren</button>
+    <button id="einstellungenKnopf" class="knopf leise" aria-label="Einstellungen">⚙</button>
+  </div>
+</header>
+
+<main>
+  <section class="karte stand">
+    <div class="zahl"><span id="anzahl">–</span><small id="anzahlText">Follower</small></div>
+    <p id="status" class="status">Lade …</p>
+    <button id="abrufen" class="knopf">Jetzt abrufen</button>
+  </section>
+
+  <nav class="reiter" role="tablist">
+    <button role="tab" aria-selected="true" data-reiter="verlauf">Verlauf</button>
+    <button role="tab" aria-selected="false" data-reiter="liste">Alle Follower</button>
+  </nav>
+
+  <section id="verlauf" class="bereich"></section>
+  <section id="liste" class="bereich" hidden>
+    <input id="suche" type="search" placeholder="Suchen …" autocomplete="off">
+    <ul id="namen" class="namen"></ul>
+  </section>
+</main>
+
+<dialog id="einstellungen">
+  <form method="dialog" id="formular">
+    <h2>Einstellungen</h2>
+    <label>Repository <small>(konto/name)</small>
+      <input id="repo" required placeholder="konto/follower-log" autocomplete="off" autocapitalize="off" spellcheck="false">
+    </label>
+    <label>Workflow-Datei
+      <input id="workflow" required value="followers.yml" autocomplete="off" autocapitalize="off" spellcheck="false">
+    </label>
+    <label>Token <small>(fine-grained, nur dieses Repo: Actions lesen und schreiben, Contents lesen)</small>
+      <input id="token" type="password" required autocomplete="off" spellcheck="false">
+    </label>
+    <p class="hinweis">Der Token bleibt nur auf diesem Gerät gespeichert und geht ausschließlich an api.github.com.</p>
+    <div class="zeile">
+      <button type="button" id="vergessen" class="knopf leise">Alles vergessen</button>
+      <button type="submit" class="knopf">Speichern</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>

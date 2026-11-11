@@ -1,0 +1,89 @@
+:root {
+  --grund: #0f1115;
+  --flaeche: #171a20;
+  --rand: #262a33;
+  --text: #b9bdc5;
+  --leise: #7c818b;
+  --akzent: #8fa3c4;
+  --neu: #86ad8f;
+  --neu-grund: #1a261d;
+  --weg: #c08f8f;
+  --weg-grund: #2a1c1c;
+}
+* { box-sizing: border-box; }
+html { background: var(--grund); }
+body {
+  margin: 0 auto; max-width: 640px; min-height: 100vh;
+  padding: max(16px, env(safe-area-inset-top)) 16px 32px;
+  background: var(--grund); color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--akzent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.kopf { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px; }
+h1 { font-size: 1.25rem; font-weight: 600; margin: 0; color: var(--text); }
+h2 { font-size: 1.1rem; margin: 0 0 12px; }
+.knoepfe { display: flex; gap: 8px; }
+.knopf {
+  font: inherit; color: var(--text); background: #222733; border: 1px solid var(--rand);
+  border-radius: 10px; padding: 8px 14px; cursor: pointer;
+}
+.knopf:disabled { opacity: .45; cursor: default; }
+.knopf.leise { background: transparent; }
+.karte { background: var(--flaeche); border: 1px solid var(--rand); border-radius: 14px; padding: 16px; }
+.stand { display: grid; gap: 10px; justify-items: start; }
+.zahl { display: flex; align-items: baseline; gap: 8px; }
+.zahl span { font-size: 2.4rem; font-weight: 600; line-height: 1; color: #d0d3d9; }
+.zahl small { color: var(--leise); }
+.status { margin: 0; color: var(--leise); font-size: .92rem; }
+.status.fehler { color: var(--weg); }
+.status.laeuft::before {
+  content: ""; display: inline-block; width: .7em; height: .7em; margin-right: .5em;
+  border: 2px solid var(--leise); border-top-color: transparent; border-radius: 50%;
+  animation: dreh 1s linear infinite; vertical-align: -1px;
+}
+@keyframes dreh { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .status.laeuft::before { animation: none; } }
+
+.reiter { display: flex; gap: 4px; margin: 20px 0 12px; border-bottom: 1px solid var(--rand); }
+.reiter button {
+  font: inherit; background: none; border: 0; color: var(--leise); padding: 8px 12px; cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.reiter button[aria-selected="true"] { color: var(--text); border-bottom-color: var(--akzent); }
+
+.tag { margin: 0 0 18px; }
+.tag h3 { font-size: .85rem; font-weight: 500; color: var(--leise); margin: 0 0 6px; }
+.eintrag { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0; }
+.marke {
+  flex: none; min-width: 3.6em; text-align: center; font-size: .78rem; font-weight: 600;
+  border-radius: 6px; padding: 2px 6px; margin-top: 2px;
+}
+.marke.neu { color: var(--neu); background: var(--neu-grund); }
+.marke.weg { color: var(--weg); background: var(--weg-grund); }
+.marke.start { color: var(--leise); background: #1d2027; }
+.eintrag .wer { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+details summary { cursor: pointer; color: var(--leise); }
+.leer { color: var(--leise); }
+
+#suche {
+  width: 100%; font: inherit; color: var(--text); background: var(--flaeche);
+  border: 1px solid var(--rand); border-radius: 10px; padding: 8px 12px; margin-bottom: 10px;
+}
+.namen { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 16px; }
+.namen li { padding: 3px 0; break-inside: avoid; overflow-wrap: anywhere; }
+@media (max-width: 380px) { .namen { columns: 1; } }
+
+dialog {
+  background: var(--flaeche); color: var(--text); border: 1px solid var(--rand); border-radius: 14px;
+  width: min(92vw, 460px); padding: 20px;
+}
+dialog::backdrop { background: rgba(0, 0, 0, .6); }
+label { display: block; margin-bottom: 12px; }
+label small { color: var(--leise); }
+label input {
+  display: block; width: 100%; margin-top: 4px; font: inherit; color: var(--text);
+  background: var(--grund); border: 1px solid var(--rand); border-radius: 8px; padding: 8px 10px;
+}
+.hinweis { font-size: .85rem; color: var(--leise); }
+.zeile { display: flex; justify-content: space-between; gap: 8px; }

@@ -1,0 +1,30 @@
+name: Follower-Tracker
+on:
+  schedule:
+    - cron: "9 9 * * *"   # täglich um 09:09 UTC (GitHub startet geplante Läufe oft etwas später)
+  workflow_dispatch:        # von Hand oder aus der App startbar
+permissions:
+  contents: write
+concurrency:
+  group: follower-tracker   # nie zwei Läufe gleichzeitig
+jobs:
+  track:
+    # Die Vorlage selbst führt nichts aus, nur deine Kopie.
+    if: github.repository != 'Dennismit2n/follower-log-vorlage'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Follower abrufen und vergleichen
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KONTO: ${{ github.repository_owner }}
+        run: |
+          gh api --paginate "users/$KONTO/followers" --jq '.[].login' > neu.txt
+          python3 .github/logbuch.py
+      - name: Speichern
+        run: |
+          git config user.name "follower-bot"
+          git config user.email "follower-bot@users.noreply.github.com"
+          git add followers.txt log.md
+          git diff --cached --quiet || git commit -m "Follower-Update $(date -u +%F)"
+          git push
