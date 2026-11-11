@@ -146,3 +146,6 @@ body.ohne .ziel::after { display: none; }
 .gross-link { margin: 4px 0 0; font-size: .85rem; }
 @media (max-width: 600px) { body { padding: 16px 16px 48px; font-size: 16px; } }
 @media (max-width: 760px) { .gross-link::before { content: "Seitlich wischen oder: "; color: var(--leise); } }
+
+/* Echtes Bildschirmfoto vom Handy */
+.echt img { display: block; width: 100%; max-width: 340px; height: auto; border: 1px solid var(--rand); border-radius: 14px; margin: 0 0 12px; }

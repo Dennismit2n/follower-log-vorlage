@@ -2,7 +2,9 @@
 
 Wer folgt dir auf GitHub, und wer ist wieder gegangen? Diese Vorlage legt dir ein privates Logbuch an und bringt eine kleine App fürs Handy mit, die beim Öffnen nachsieht.
 
-<img src="docs/bildschirmfoto.png" alt="Die App auf dem Handy: oben die Zahl der Follower, darunter der Verlauf mit neu und weg je Tag" width="320">
+<img src="docs/bildschirmfoto.png" alt="Die App auf dem Handy: oben die Zahl der Follower, darunter der Verlauf mit neu und weg je Tag" width="320"> <img src="docs/anleitung/handy.png" alt="Die App auf meinem Handy: 73 Follower, letzter Lauf vor 1 h 21 min, nächster Abruf ab 23:12, darunter der Verlauf je Tag mit grünen Marken neu und roten Marken weg. Die Namen sind geschwärzt." width="320">
+
+Links die Demo mit erfundenen Namen, rechts die App auf meinem Handy mit meinem echten Logbuch. Die Namen habe ich geschwärzt.
 
 **App:** https://dennismit2n.github.io/follower-log-vorlage/ (zum Ausprobieren ohne Konto: [Demo](https://dennismit2n.github.io/follower-log-vorlage/?demo))
 
